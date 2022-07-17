@@ -1,0 +1,14 @@
+name: on-push-branches
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - develop
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "it has been triggered"

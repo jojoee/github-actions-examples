@@ -1,0 +1,14 @@
+name: on-pull_request-opened
+on:
+  pull_request:
+    types: [opened]
+    branches:
+      - develop
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "it has been triggered"
